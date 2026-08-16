@@ -651,6 +651,8 @@
     .item-fields-col { grid-template-columns: 1fr; }
   }
 </style>
+  <!-- n8n Chat Widget stylesheet -->
+  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -1673,5 +1675,17 @@
     }
   }
 </script>
+  <!-- n8n Chat Widget -->
+  <script type="module">
+    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+    createChat({
+      webhookUrl: 'https://compacted-dragging-irritant.ngrok-free.dev/webhook/36355987-7e1a-4e23-9ed9-657afb3ad5d7/chat',
+      initialMessages: [
+        'Hi! 👋 I\'m here to help with your order — ask me anything about the menu, delivery, or your order status.'
+      ]
+    });
+  </script>
+</body>
+</html>
 </body>
 </html>
